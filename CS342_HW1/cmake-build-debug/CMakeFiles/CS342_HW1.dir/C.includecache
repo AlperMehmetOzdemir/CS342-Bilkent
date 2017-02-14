@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/celikkoseoglu/CLionProjects/CS342_HW1/btree.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
