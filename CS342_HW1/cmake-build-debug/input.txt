@@ -1,0 +1,9 @@
+state
+age
+ethnic
+grand
+drag
+cheat
+holiday
+orientation
+paralyzed
