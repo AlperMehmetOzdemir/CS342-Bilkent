@@ -1,82 +1,62 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdlib.h>
+#include<stdio.h>
 #include <string.h>
 
-struct node
-{
-    char *key;
-    struct node *left, *right;
-};
+typedef struct bin_node {
+    char *data;
+    struct bin_node *right, *left;
+} node;
 
-struct node *search(char *key, struct node *leaf)
-{
-    if( leaf != NULL )
-    {
-        if(key == leaf->key)
-        {
-            return leaf;
-        }
-        else if(key < leaf->key)
-        {
-            return search(key, leaf->left);
-        }
-        else
-        {
-            return search(key, leaf->right);
-        }
+void insert(node **tree, char *val) {
+    node *temp = NULL;
+    if (!(*tree)) {
+        temp = (node *) malloc(sizeof(node));
+        temp->left = temp->right = NULL;
+        temp->data = val;
+        *tree = temp;
+        return;
     }
-    else return 0;
+
+    //do not insert the new string if it exists in the tree -> do not handle the case for strcmp == 0
+    if (strcmp(val, (*tree)->data) < 0) {
+        insert(&(*tree)->left, val);
+    } else if (strcmp(val, (*tree)->data) > 0) {
+        insert(&(*tree)->right, val);
+    }
+
 }
 
-insert(char *key, struct node **leaf)
-{
-    if( *leaf == NULL )
-    {
-        *leaf = (struct node*) malloc( sizeof( struct node ) );
-        (*leaf)->key = key;
-        /* initialize the children to null */
-        (*leaf)->left = NULL;
-        (*leaf)->right = NULL;
-    }
-    else if(strcmp(key, (*leaf)->key) < 0)
-    {
-        insert( key, &(*leaf)->left );
-    }
-    else if(strcmp(key, (*leaf)->key) > 0)
-    {
-        insert( key, &(*leaf)->right );
-    }
-}
 
-void destroy_tree(struct node *leaf)
-{
-    if( leaf != NULL )
-    {
-        destroy_tree(leaf->left);
-        destroy_tree(leaf->right);
-        free( leaf );
-    }
-}
 
-void inorder(struct node *tree)
-{
-    if (tree)
-    {
+void inorder(node *tree) {
+    if (tree) {
         inorder(tree->left);
-        printf(tree->key);
+        printf("%s\n", tree->data);
         inorder(tree->right);
     }
 }
 
-int main() {
+void deltree(node *tree) {
+    if (tree) {
+        deltree(tree->left);
+        deltree(tree->right);
+        free(tree);
+    }
+}
 
-    struct node *root;
+void main() {
+    node *root;
+    root = NULL; //root is initialized to some random address if not specified explicitly like this
 
-    char *text = "asd";
+    /* Inserting nodes into tree */
+    insert(&root, "zzz");
+    insert(&root, "asd");
+    insert(&root, "ddd");
 
-    insert(text, &root);
-
+    /* Printing nodes of tree */
+    printf("In Order Display\n");
     inorder(root);
 
-    return 0;
+    /* Deleting all nodes of tree */
+    deltree(root);
 }

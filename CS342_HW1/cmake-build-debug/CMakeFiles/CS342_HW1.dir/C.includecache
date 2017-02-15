@@ -6,10 +6,10 @@
 
 #IncludeRegexTransform: 
 
-/Users/celikkoseoglu/CLionProjects/CS342_HW1/btree.c
-stdio.h
--
+/home/celik/Desktop/CS342-Bilkent/CS342_HW1/btree.c
 stdlib.h
+-
+stdio.h
 -
 string.h
 -
