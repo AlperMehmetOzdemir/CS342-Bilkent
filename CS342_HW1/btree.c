@@ -30,12 +30,16 @@ void insert(node **tree, char *val) {
     }
 }
 
-void inorder(node *tree) {
+void inorder(node *tree, FILE* fp) {
     if (tree) {
-        inorder(tree->left);
-        printf("%s\n", tree->data);
-        inorder(tree->right);
+        inorder(tree->left, fp);
+        //printf("%s\n", tree->data); // this part is going to be replaced by -write output to file-
+
+        fprintf(fp, "%s\n", tree->data);
+
+        inorder(tree->right, fp);
     }
+
 }
 
 int main(int argc, char *argv[]) {
@@ -46,6 +50,7 @@ int main(int argc, char *argv[]) {
     node *root;
     root = NULL; //root is initialized to some random address if not specified explicitly like this
 
+    //file reading part is taken from the C language library guides. The following is possibly the best way to do it since you don't have to allocate a pre-determined size for the input buffer
     FILE * fp;
     char * line = NULL;
     size_t len = 0;
@@ -65,9 +70,10 @@ int main(int argc, char *argv[]) {
         insert(&root, line);
     }
 
-    /* Printing nodes of tree */
-    printf("In Order Display\n");
-    inorder(root);
+    fp = fopen("output.txt", "w+");
+    inorder(root, fp);
+
+    fclose(fp);
 
     return 0;
 }
