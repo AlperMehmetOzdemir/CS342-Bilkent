@@ -1,24 +1,26 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 typedef struct bin_node {
     char *data;
     struct bin_node *right, *left;
-} node;
+} node; //typedef bin_node -> node. Whenever I write node somewhere, compiler automatically replaces it with struct bin_node
 
 void insert(node **tree, char *val) {
     node *temp = NULL;
     if (!(*tree)) {
         temp = (node *) malloc(sizeof(node));
         temp->left = temp->right = NULL;
-        temp->data = val;
+
+        char * val_copy;
+        val_copy = malloc(sizeof(char) * strlen(val));
+        strcpy(val_copy, val);
+
+        temp->data = val_copy;
         *tree = temp;
         return;
     }
-
-    printf("%s", "Comparing value and the tree data: ");
-    printf("%d", strcmp(val, (*tree)->data));
 
     //do not insert the new string if it exists in the tree -> do not handle the case for strcmp == 0
     if (strcmp(val, (*tree)->data) < 0) {
@@ -26,9 +28,7 @@ void insert(node **tree, char *val) {
     } else if (strcmp(val, (*tree)->data) > 0) {
         insert(&(*tree)->right, val);
     }
-
 }
-
 
 void inorder(node *tree) {
     if (tree) {
@@ -56,12 +56,12 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
 
     while ((read = getline(&line, &len, fp)) != -1) {
-        printf("Retrieved line of length %zu :\n", read);
-        printf("%s", line);
 
-        if( line[read-1] == '\n' )
+        if( line[read-1] == '\n' ) //replace line endings with string terminators. Well, maybe this results in a memory leak because "someString\n\0" becomes "someString\0\0". Not sure about that though.
             line[read-1] = '\0';
 
+        /* pointer errors sometimes figure out days to figure out. By not doing a deep copy in the insert function, I was overwriting the current root's *data.
+         * always do a deep copy while working with strings and trees... */
         insert(&root, line);
     }
 
