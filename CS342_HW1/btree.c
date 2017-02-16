@@ -25,7 +25,7 @@ void insert(node **tree, char *val) {
     //do not insert the new string if it exists in the tree -> do not handle the case for strcmp == 0
     if (strcmp(val, (*tree)->data) < 0) {
         insert(&(*tree)->left, val);
-    } else if (strcmp(val, (*tree)->data) > 0) {
+    } else if (strcmp(val, (*tree)->data) >= 0) {
         insert(&(*tree)->right, val);
     }
 }

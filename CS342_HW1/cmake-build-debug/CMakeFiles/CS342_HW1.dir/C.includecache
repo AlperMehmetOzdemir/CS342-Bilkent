@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/celik/Desktop/CS342-Bilkent/CS342_HW1/btree.c
+/Users/celikkoseoglu/Desktop/CS342-Bilkent/CS342_HW1/btree.c
 stdlib.h
 -
 stdio.h

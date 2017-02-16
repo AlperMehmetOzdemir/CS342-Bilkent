@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/celik/Desktop/CS342-Bilkent/CS342_HW1/btree.c" "/home/celik/Desktop/CS342-Bilkent/CS342_HW1/cmake-build-debug/CMakeFiles/CS342_HW1.dir/btree.c.o"
+  "/Users/celikkoseoglu/Desktop/CS342-Bilkent/CS342_HW1/btree.c" "/Users/celikkoseoglu/Desktop/CS342-Bilkent/CS342_HW1/cmake-build-debug/CMakeFiles/CS342_HW1.dir/btree.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
