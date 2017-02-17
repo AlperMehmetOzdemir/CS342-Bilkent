@@ -14,7 +14,7 @@ void insert(node **tree, char *val) {
         temp->left = temp->right = NULL;
 
         char * val_copy;
-        val_copy = malloc(sizeof(char) * strlen(val));
+        val_copy = (char*)malloc(sizeof(char) * strlen(val));
         strcpy(val_copy, val);
 
         temp->data = val_copy;
@@ -45,7 +45,8 @@ void inorder(node *tree, FILE* fp) {
 int main(int argc, char *argv[]) {
 
     // argv[0] is the name of the program
-    const char *const fileName = argv[1]; //this is a constant pointer to a constant char. confusing stuff
+    const char *const inputFileName = argv[1]; //this is a constant pointer to a constant char. confusing stuff
+    const char *const outputFileName = argv[2];
 
     node *root;
     root = NULL; //root is initialized to some random address if not specified explicitly like this
@@ -56,7 +57,7 @@ int main(int argc, char *argv[]) {
     size_t len = 0;
     ssize_t read;
 
-    fp = fopen("input.txt", "r");
+    fp = fopen(inputFileName, "r");
     if (fp == NULL)
         exit(EXIT_FAILURE);
 
@@ -70,7 +71,7 @@ int main(int argc, char *argv[]) {
         insert(&root, line);
     }
 
-    fp = fopen("output.txt", "w+");
+    fp = fopen(outputFileName, "w+");
     inorder(root, fp);
 
     fclose(fp);
