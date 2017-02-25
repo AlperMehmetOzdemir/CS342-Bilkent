@@ -1,0 +1,3 @@
+/home/celik/Desktop/CS342-Bilkent/CS342_P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/celik/Desktop/CS342-Bilkent/CS342_P1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/celik/Desktop/CS342-Bilkent/CS342_P1/cmake-build-debug/CMakeFiles/CS342_P1.dir

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/celik/Desktop/CS342-Bilkent/CS342_P1/main.c
+stdlib.h
+-
+stdio.h
+-
+unistd.h
+-
+fcntl.h
+-
+errno.h
+-
+string.h
+-
+
