@@ -6,17 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/celik/Desktop/CS342-Bilkent/CS342_P1/main.c
+/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/main.c
+stdio.h
+-
 stdlib.h
 -
-stdio.h
+string.h
 -
 unistd.h
 -
-fcntl.h
--
-errno.h
--
-string.h
+assert.h
 -
 
