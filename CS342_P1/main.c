@@ -21,11 +21,12 @@ void processFile(char *inputFileName, char *outputFileName, const char *keyword)
 
     while ((read = getline(&line, &len, fr)) != -1) {
 
-        if( line[read-1] == '\n' ) //replace line endings with string terminators. Well, maybe this results in a memory leak because "someString\n\0" becomes "someString\0\0". Not sure about that though.
-            line[read-1] = '\0';
+        if (line[read - 1] ==
+            '\n') //replace line endings with string terminators. Well, maybe this results in a memory leak because "someString\n\0" becomes "someString\0\0". Not sure about that though.
+            line[read - 1] = '\0';
 
         char *line_copy;
-        line_copy = (char*)malloc(sizeof(char) * strlen(line));
+        line_copy = (char *) malloc(sizeof(char) * strlen(line));
         strcpy(line_copy, line);
 
         char *tok = line, *end = line;
@@ -72,7 +73,7 @@ int main(int argc, char **argv) {
             printf("\nInput file name: %s", argv[i]);
 
             char str[10];
-            sprintf(str, "%d.txt", i);
+            sprintf(str, "%d.txt", i - 3);
 
             processFile(argv[i], str, keyword);
 
@@ -81,15 +82,38 @@ int main(int argc, char **argv) {
 
     }
 
-    /*if (child == 0)
-        readFile(argv[3]);
-    else
-        readFile(argv[4]);*/
+    waitpid(-1, NULL, 0); //wait for all children process to exit
 
+    //now start merging the intermediary .txt files
+    FILE *fr, *fw;
+    char *line = NULL;
+    size_t len = 0;
+    ssize_t read;
 
-    /*const char *const outputFileName = argv[numberOfInputs + 3];
+    fw = fopen(argv[numberOfInputs + 3], "w+");
 
-    printf("\nOutput file name:  %s", outputFileName);*/
+    for (int i = 0; i < numberOfInputs; i++) {
+        char str[10];
+        sprintf(str, "%d.txt", i);
+
+        fr = fopen(str, "r");
+
+        if (fr == NULL)
+            exit(EXIT_FAILURE);
+
+        while ((read = getline(&line, &len, fr)) != -1) {
+
+            fprintf(fw, "%s", line);
+
+        }
+    }
+
+    fclose(fw);
+    fclose(fr);
+
+/*const char *const outputFileName = argv[numberOfInputs + 3];
+
+printf("\nOutput file name:  %s", outputFileName);*/
 
     return 0;
 }
