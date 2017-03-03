@@ -9,3 +9,11 @@ input1, 74: static char enumcase implements staticprotected transient enum throw
 input1, 77: catch static
 input1, 78: boolean return static static dofinal if extends throw assert final continuefinal
 input1, 86: static case inttrycase
+input2, 2: privatebyte final elsedefault transientassert continue case catchgoto else shortdoublecontinue implements static void private private enum gotocatch
+input2, 9: throwsenum casebreak extendscatch static
+input2, 15: byteinstanceofinterface new this static short packageprotectedgoto
+input2, 31: gotogotostaticabstract short packagegotodouble continueinstanceofpackage assert synchronized static implements
+input2, 53: interface import static goto protected public abstract
+input2, 58: byte throwsprivatechar enum private if interface static this enum switch package package private private try interface defaultforcontinue
+input2, 86: static transient catch instanceofbyteextendsifassert charcontinuegoto void try static catch continue void import void return
+input2, 94: double new catch if public booleaninterfacedefault default importvoid public static else
