@@ -1,4 +1,0 @@
-in3.txt, 1: hello hello are you there
-in3.txt, 2: and diesel said hello
-in3.txt, 3: gasoline replied hello
-in3.txt, 5: well hello is such a good word to combine with stuff

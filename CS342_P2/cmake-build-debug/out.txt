@@ -1,3 +1,4 @@
+in1.txt, 1: this is the word hello
 in2.txt, 1: isnt hello such a beautiful word
 in2.txt, 2: world says hello to you
 in2.txt, 3: hello darkness my old friend
@@ -5,3 +6,7 @@ in2.txt, 4: this is hello world
 in2.txt, 5: hello is the word
 in2.txt, 6: this is the word hello
 in2.txt, 8: but this one does contain hello
+in3.txt, 1: hello hello are you there
+in3.txt, 2: and diesel said hello
+in3.txt, 3: gasoline replied hello
+in3.txt, 5: well hello is such a good word to combine with stuff

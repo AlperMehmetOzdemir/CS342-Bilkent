@@ -123,32 +123,32 @@ CS342_P1/fast:
 	$(MAKE) -f CMakeFiles/CS342_P1.dir/build.make CMakeFiles/CS342_P1.dir/build
 .PHONY : CS342_P1/fast
 
-main.o: main.c.o
+prog1.o: prog1.c.o
 
-.PHONY : main.o
+.PHONY : prog1.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/CS342_P1.dir/build.make CMakeFiles/CS342_P1.dir/main.c.o
-.PHONY : main.c.o
+prog1.c.o:
+	$(MAKE) -f CMakeFiles/CS342_P1.dir/build.make CMakeFiles/CS342_P1.dir/prog1.c.o
+.PHONY : prog1.c.o
 
-main.i: main.c.i
+prog1.i: prog1.c.i
 
-.PHONY : main.i
+.PHONY : prog1.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/CS342_P1.dir/build.make CMakeFiles/CS342_P1.dir/main.c.i
-.PHONY : main.c.i
+prog1.c.i:
+	$(MAKE) -f CMakeFiles/CS342_P1.dir/build.make CMakeFiles/CS342_P1.dir/prog1.c.i
+.PHONY : prog1.c.i
 
-main.s: main.c.s
+prog1.s: prog1.c.s
 
-.PHONY : main.s
+.PHONY : prog1.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/CS342_P1.dir/build.make CMakeFiles/CS342_P1.dir/main.c.s
-.PHONY : main.c.s
+prog1.c.s:
+	$(MAKE) -f CMakeFiles/CS342_P1.dir/build.make CMakeFiles/CS342_P1.dir/prog1.c.s
+.PHONY : prog1.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CS342_P1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... prog1.o"
+	@echo "... prog1.i"
+	@echo "... prog1.s"
 .PHONY : help
 
 

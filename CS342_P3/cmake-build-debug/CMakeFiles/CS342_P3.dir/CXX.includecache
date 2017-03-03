@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/celikkoseoglu/CLionProjects/CS342_P3/trial.cpp
+stdio.h
+-
+unistd.h
+-
+sys/types.h
+-
+

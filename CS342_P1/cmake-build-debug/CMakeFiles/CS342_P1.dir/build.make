@@ -57,38 +57,38 @@ include CMakeFiles/CS342_P1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CS342_P1.dir/flags.make
 
-CMakeFiles/CS342_P1.dir/main.c.o: CMakeFiles/CS342_P1.dir/flags.make
-CMakeFiles/CS342_P1.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CS342_P1.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CS342_P1.dir/main.c.o   -c "/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/main.c"
+CMakeFiles/CS342_P1.dir/prog1.c.o: CMakeFiles/CS342_P1.dir/flags.make
+CMakeFiles/CS342_P1.dir/prog1.c.o: ../prog1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CS342_P1.dir/prog1.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CS342_P1.dir/prog1.c.o   -c "/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/prog1.c"
 
-CMakeFiles/CS342_P1.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CS342_P1.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/main.c" > CMakeFiles/CS342_P1.dir/main.c.i
+CMakeFiles/CS342_P1.dir/prog1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CS342_P1.dir/prog1.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/prog1.c" > CMakeFiles/CS342_P1.dir/prog1.c.i
 
-CMakeFiles/CS342_P1.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CS342_P1.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/main.c" -o CMakeFiles/CS342_P1.dir/main.c.s
+CMakeFiles/CS342_P1.dir/prog1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CS342_P1.dir/prog1.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/prog1.c" -o CMakeFiles/CS342_P1.dir/prog1.c.s
 
-CMakeFiles/CS342_P1.dir/main.c.o.requires:
+CMakeFiles/CS342_P1.dir/prog1.c.o.requires:
 
-.PHONY : CMakeFiles/CS342_P1.dir/main.c.o.requires
+.PHONY : CMakeFiles/CS342_P1.dir/prog1.c.o.requires
 
-CMakeFiles/CS342_P1.dir/main.c.o.provides: CMakeFiles/CS342_P1.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/CS342_P1.dir/build.make CMakeFiles/CS342_P1.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/CS342_P1.dir/main.c.o.provides
+CMakeFiles/CS342_P1.dir/prog1.c.o.provides: CMakeFiles/CS342_P1.dir/prog1.c.o.requires
+	$(MAKE) -f CMakeFiles/CS342_P1.dir/build.make CMakeFiles/CS342_P1.dir/prog1.c.o.provides.build
+.PHONY : CMakeFiles/CS342_P1.dir/prog1.c.o.provides
 
-CMakeFiles/CS342_P1.dir/main.c.o.provides.build: CMakeFiles/CS342_P1.dir/main.c.o
+CMakeFiles/CS342_P1.dir/prog1.c.o.provides.build: CMakeFiles/CS342_P1.dir/prog1.c.o
 
 
 # Object files for target CS342_P1
 CS342_P1_OBJECTS = \
-"CMakeFiles/CS342_P1.dir/main.c.o"
+"CMakeFiles/CS342_P1.dir/prog1.c.o"
 
 # External object files for target CS342_P1
 CS342_P1_EXTERNAL_OBJECTS =
 
-CS342_P1: CMakeFiles/CS342_P1.dir/main.c.o
+CS342_P1: CMakeFiles/CS342_P1.dir/prog1.c.o
 CS342_P1: CMakeFiles/CS342_P1.dir/build.make
 CS342_P1: CMakeFiles/CS342_P1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable CS342_P1"
@@ -99,7 +99,7 @@ CMakeFiles/CS342_P1.dir/build: CS342_P1
 
 .PHONY : CMakeFiles/CS342_P1.dir/build
 
-CMakeFiles/CS342_P1.dir/requires: CMakeFiles/CS342_P1.dir/main.c.o.requires
+CMakeFiles/CS342_P1.dir/requires: CMakeFiles/CS342_P1.dir/prog1.c.o.requires
 
 .PHONY : CMakeFiles/CS342_P1.dir/requires
 

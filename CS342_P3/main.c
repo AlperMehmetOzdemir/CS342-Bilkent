@@ -3,19 +3,21 @@
 #include <string.h>
 #include <unistd.h>
 
-void processFile(char *inputFileName, char *outputFileName, const char *keyword) {
+#define MAX_LENGTH 256
+
+void processFile(char *inputFileName, const char *keyword, FILE *fw) {
 
     //file reading part is taken from the C language library guides. The following is possibly the best way to do it since you don't have to allocate a pre-determined size for the input buffer
-    FILE *fr, *fw;
+    FILE *fr;
     char *line = NULL;
     size_t len = 0;
     ssize_t read;
 
     fr = fopen(inputFileName, "r");
-    fw = fopen(outputFileName, "w+");
-
-    if (fr == NULL)
+    if (fr == NULL) {
+        printf("\n\nInput files don't exist. Exiting...\n\n");
         exit(EXIT_FAILURE);
+    }
 
     int lineNumber = 1;
 
@@ -43,9 +45,6 @@ void processFile(char *inputFileName, char *outputFileName, const char *keyword)
 
         lineNumber++;
     }
-
-    fclose(fw);
-
 }
 
 int main(int argc, char **argv) {
@@ -53,15 +52,22 @@ int main(int argc, char **argv) {
     //argv[0] is the name of the program hello 3 in1.txt in2.txt in3.txt out.txt
 
     const char *const keyword = argv[1];
-
-    printf("\nKeyword to search for: %s", keyword);
-
     const int numberOfInputs = atoi(argv[2]);
+    const char *const outputFileName = argv[numberOfInputs + 3];
 
-    //printf("\nNumber of Inputs: %d", numberOfInputs);
+    FILE *fw;
+    fw = fopen(outputFileName, "w+");
 
+    int fd[2 * numberOfInputs];
 
-    for (int i = 3; i < numberOfInputs + 3; i++) {
+    FILE *fpin[2 * numberOfInputs];
+    FILE *fpout[2 * numberOfInputs];
+
+    for (int i = 0; i < numberOfInputs; i++) {
+        pipe(&fd[2*i]);
+    }
+
+    for (int i = 0; i < numberOfInputs; i++) {
 
         pid_t childProcessId = fork();
 
@@ -69,51 +75,33 @@ int main(int argc, char **argv) {
             printf("\nCannot create child process. Exiting...");
             exit(1);
         } else if (childProcessId == 0) {
-            printf("\nChild (%d): %d\n", i + 1, getpid());
-            printf("\nInput file name: %s", argv[i]);
+            close(fd[2 * i]); /* Close unused end*/
 
-            char str[10];
-            sprintf(str, "%d.txt", i - 3);
+            fpout[2 * i] = fdopen(fd[2 * i + 1], "w");
+            processFile(argv[i + 3], keyword, fpout[2 * i]);
+            fclose(fpout[2 * i]);
 
-            processFile(argv[i], str, keyword);
-
-            exit(0);
+            _exit(0); //_exit and exit has a difference...
         }
 
+        else {
+            close(fd[2 * i + 1]); /* Close unused end*/
+
+            printf("entered");
+
+            fpin[2 * i] = fdopen(fd[2 * i], "r");
+
+            char line[MAX_LENGTH];
+            while (fgets(line, MAX_LENGTH, fpin[2 * i]) != NULL)
+                fprintf(fw, "%s", line);
+
+            fclose(fpin[2 * i]);
+
+            close(fd[2 * i]); /* Close used end */
+        }
     }
 
     waitpid(-1, NULL, 0); //wait for all children process to exit
-
-    //now start merging the intermediary .txt files
-    FILE *fr, *fw;
-    char *line = NULL;
-    size_t len = 0;
-    ssize_t read;
-
-    fw = fopen(argv[numberOfInputs + 3], "w+");
-
-    for (int i = 0; i < numberOfInputs; i++) {
-        char str[10];
-        sprintf(str, "%d.txt", i);
-
-        fr = fopen(str, "r");
-
-        if (fr == NULL)
-            exit(EXIT_FAILURE);
-
-        while ((read = getline(&line, &len, fr)) != -1) {
-
-            fprintf(fw, "%s", line);
-
-        }
-    }
-
-    fclose(fw);
-    fclose(fr);
-
-/*const char *const outputFileName = argv[numberOfInputs + 3];
-
-printf("\nOutput file name:  %s", outputFileName);*/
 
     return 0;
 }

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CS342_P1.dir/main.c.o"
+  "CMakeFiles/CS342_P1.dir/prog1.c.o"
   "CS342_P1.pdb"
   "CS342_P1"
 )
