@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <pthread.h>
+#include <time.h>
 
 typedef struct node {
     char *data;
@@ -15,7 +16,9 @@ void insert(node **tree, char *val) { //this is the btree from HW1 but only exte
         temp = (node *) malloc(sizeof(node));
         temp->right = NULL;
 
-	/*valgrind leak here is normal. rather than traversing through the list and deleting all ondes as a last step of a program is a waste of cpu cycles. Killing the process is much easier and faster. These records are required to stay here until the end */
+	/*valgrind leak here seems normal. Traversing through the list and deleting all nodes
+	 * as a last step of a program is a waste of cpu cycles. Killing the process is much easier and faster.
+	 * These records are required to stay here until the end */
         char *val_copy = strdup(val);
         temp->data = val_copy;
         *tree = temp;
@@ -93,6 +96,8 @@ void *processFile(void *args) {
 
 int main(int argc, char **argv) {
 
+    clock_t start_time = clock();
+
     const char *const keyword = argv[1];
 
     const int numberOfInputs = atoi(argv[2]);
@@ -142,4 +147,8 @@ int main(int argc, char **argv) {
         free(root[i]);
         free(pfa[i]);
     }
+
+    clock_t end_time = clock();
+
+    printf("The program took: %zd milliseconds.", end_time - start_time);
 }

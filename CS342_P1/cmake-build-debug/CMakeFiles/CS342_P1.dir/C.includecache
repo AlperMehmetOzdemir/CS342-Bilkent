@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P1/pmatch1.c
+/home/celik/Desktop/CS342-Bilkent/CS342_P1/pmatch1.c
 stdio.h
 -
 stdlib.h
@@ -16,5 +16,7 @@ string.h
 unistd.h
 -
 sys/wait.h
+-
+time.h
 -
 

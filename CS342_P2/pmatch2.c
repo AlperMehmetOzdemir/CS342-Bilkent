@@ -3,6 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <time.h>
 
 #define MAX_LENGTH 256
 
@@ -47,6 +48,8 @@ void processFile(char *inputFileName, const char *keyword, FILE *fw) {
 }
 
 int main(int argc, char **argv) {
+
+    clock_t start_time = clock();
 
     //argv[0] is the name of the program hello 3 in1.txt in2.txt in3.txt out.txt
 
@@ -100,7 +103,9 @@ int main(int argc, char **argv) {
         }
     }
 
+    clock_t end_time = clock();
 
+    printf("The program took: %zd milliseconds.", end_time - start_time);
 
     return 0;
 }
