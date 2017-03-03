@@ -15,6 +15,7 @@ void insert(node **tree, char *val) { //this is the btree from HW1 but only exte
         temp = (node *) malloc(sizeof(node));
         temp->right = NULL;
 
+	/*valgrind leak here is normal. rather than traversing through the list and deleting all ondes as a last step of a program is a waste of cpu cycles. Killing the process is much easier and faster. These records are required to stay here until the end */
         char *val_copy = strdup(val);
         temp->data = val_copy;
         *tree = temp;
