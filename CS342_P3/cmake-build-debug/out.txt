@@ -1,0 +1,32 @@
+input1, 4: else forbooleancontinue boolean catchswitch byte shortabstract caseassertcase returnfinal import catch static package charbyte extends enum protected shortthrowsassertpublic switchdouble try
+input1, 6: static
+input1, 44: importgoto packagecatch tryswitchenumgoto new forbreak continueenum throws static
+input1, 47: this finalimport static catch static goto instanceof public package final privateinterface do int packagedefault breakbooleanimport newpackage
+input1, 51: elseswitchimportfinalpublic char casecontinueabstract throw char char ifassert boolean void assert byte instanceofboolean assert public catch static int if catch static finalthrows throws char import return static static enumchar
+input1, 60: static do tryvoid new new this synchronizeddo throw doimport protectedimport return
+input1, 71: static boolean
+input1, 74: static char enumcase implements staticprotected transient enum throw char interface this throw public final if interface
+input1, 77: catch static
+input1, 78: boolean return static static dofinal if extends throw assert final continuefinal
+input1, 86: static case inttrycase
+input2, 2: privatebyte final elsedefault transientassert continue case catchgoto else shortdoublecontinue implements static void private private enum gotocatch
+input2, 9: throwsenum casebreak extendscatch static
+input2, 15: byteinstanceofinterface new this static short packageprotectedgoto
+input2, 31: gotogotostaticabstract short packagegotodouble continueinstanceofpackage assert synchronized static implements
+input2, 53: interface import static goto protected public abstract
+input2, 58: byte throwsprivatechar enum private if interface static this enum switch package package private private try interface defaultforcontinue
+input2, 86: static transient catch instanceofbyteextendsifassert charcontinuegoto void try static catch continue void import void return
+input2, 94: double new catch if public booleaninterfacedefault default importvoid public static else
+input3, 26: tryprivatereturn int final static this
+input3, 28: thisreturntry import public switch enum forbooleandouble static continue implements implements staticbreak private break dofinal voidfinal voidimport assertthrowsvoid break else
+input3, 36: break voiddo break packagedefaultdefault synchronized void enum try package else interface interface finalpublicreturn thisimportgoto catch assert elsedoprivatebyte switch static synchronizeddo void ifswitch doubleshort boolean
+input3, 39: privateswitch else doubleshort static for
+input3, 42: bytepackageenum static implements
+input3, 65: for assert assert catchabstract new breakshort returnfinal instanceof static protected switchelse final do instanceof abstract intdo casedouble transienttransient break elsefinal package synchronized
+input3, 71: static short try throws extendstransient private instanceof instanceofint void goto doimport continuetry catchinstanceof enumprotected double new do switch transient return break import instanceofenum int shortbreak
+input3, 85: else publicimportdoubleinterface continue defaultimplementstry return forprotectedsynchronized static abstractdefaultcase protected extends catch if short gotothrowboolean else public enum intstatic caseinterfacethrowsdo implements if booleanpublic throw default
+input3, 88: boolean staticdefault abstract static catch trytransient importthrowimplements casecase staticthis
+input3, 91: catch charbooleanswitchstaticcasebyte default package public static return double
+input3, 93: short public trystatic elsepackage synchronized public private synchronized do static return short enum elseextends short implements break assert implements assert switch char staticinstanceof if byte
+input3, 96: voidpackage extends case dothrowsgotothisgotofor throws private interface throw switch else abstract if booleandouble short public enumbyte implements throw goto static charchar abstract catch instanceof catch return transient voidpublicshortprotected double
+input3, 97: else throws switch final catch double case final private byte if import dothrow private this instanceof new for static catch for charimport assert try switch protected elseintinstanceof public

@@ -1,12 +1,22 @@
-in1.txt, 1: this is the word hello
-in2.txt, 1: isnt hello such a beautiful word
-in2.txt, 2: world says hello to you
-in2.txt, 3: hello darkness my old friend
-in2.txt, 4: this is hello world
-in2.txt, 5: hello is the word
-in2.txt, 6: this is the word hello
-in2.txt, 8: but this one does contain hello
-in3.txt, 1: hello hello are you there
-in3.txt, 2: and diesel said hello
-in3.txt, 3: gasoline replied hello
-in3.txt, 5: well hello is such a good word to combine with stuff
+input1, 4: else forbooleancontinue boolean catchswitch byte shortabstract caseassertcase returnfinal import catch static package charbyte extends enum protected shortthrowsassertpublic switchdouble try
+input1, 6: static
+input1, 44: importgoto packagecatch tryswitchenumgoto new forbreak continueenum throws static
+input1, 47: this finalimport static catch static goto instanceof public package final privateinterface do int packagedefault breakbooleanimport newpackage
+input1, 51: elseswitchimportfinalpublic char casecontinueabstract throw char char ifassert boolean void assert byte instanceofboolean assert public catch static int if catch static finalthrows throws char import return static static enumchar
+input1, 60: static do tryvoid new new this synchronizeddo throw doimport protectedimport return
+input1, 71: static boolean
+input1, 74: static char enumcase implements staticprotected transient enum throw char interface this throw public final if interface
+input1, 77: catch static
+input1, 78: boolean return static static dofinal if extends throw assert final continuefinal
+input1, 86: static case inttrycase
+input2, 2: privatebyte final elsedefault transientassert continue case catchgoto else shortdoublecontinue implements static void private private enum gotocatch
+input2, 9: throwsenum casebreak extendscatch static
+input2, 15: byteinstanceofinterface new this static short packageprotectedgoto
+input2, 31: gotogotostaticabstract short packagegotodouble continueinstanceofpackage assert synchronized static implements
+input2, 53: interface import static goto protected public abstract
+input2, 58: byte throwsprivatechar enum private if interface static this enum switch package package private private try interface defaultforcontinue
+input2, 86: static transient catch instanceofbyteextendsifassert charcontinuegoto void try static catch continue void import void return
+input2, 94: double new catch if public booleaninterfacedefault default importvoid public static else
+input3, 1: else publicimportdoubleinterface continue defaultimplementstry return forprotectedsynchronized static abstractdefaultcase protected extends catch if short gotothrowboolean else public enum intstatic caseinterfacethrowsdo implements if booleanpublic throw default
+input3, 2: short public trystatic elsepackage synchronized public private synchronized do static return short enum elseextends short implements break assert implements assert switch char staticinstanceof if byte
+input3, 3: voidpackage extends case dothrowsgotothisgotofor throws private interface throw switch else abstract if booleandouble short public enumbyte implements throw goto static charchar abstract catch instanceof catch return transient voidpublicshortprotected double

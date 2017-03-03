@@ -5,14 +5,15 @@
 
 typedef struct node {
     char *data;
-    struct node *right, *left;
-} node; //typedef bin_node -> node. Whenever I write node somewhere, compiler automatically replaces it with struct bin_node
+    struct node *right;
+} node;
 
-void insert(node **tree, char *val) {
+void insert(node **tree, char *val) { //this is the btree from HW1 but only extends to the right. It is indeed a linked list.
+
     node *temp = NULL;
     if (!(*tree)) {
         temp = (node *) malloc(sizeof(node));
-        temp->left = temp->right = NULL;
+        temp->right = NULL;
 
         char * val_copy;
         val_copy = (char*)malloc(sizeof(char) * strlen(val));
@@ -23,21 +24,13 @@ void insert(node **tree, char *val) {
         return;
     }
 
-    //do not insert the new string if it exists in the tree -> do not handle the case for strcmp == 0
-    if (strcmp(val, (*tree)->data) < 0) {
-        insert(&(*tree)->left, val);
-    } else if (strcmp(val, (*tree)->data) >= 0) {
-        insert(&(*tree)->right, val);
-    }
+
+    insert(&(*tree)->right, val);
 }
 
 void inorder(node *tree, FILE* fp) {
     if (tree) {
-        inorder(tree->left, fp);
-        //printf("%s\n", tree->data); // this part is going to be replaced by -write output to file-
-
         fprintf(fp, "%s\n", tree->data);
-
         inorder(tree->right, fp);
     }
 
@@ -85,7 +78,8 @@ void *processFile(void *args) {
             strsep(&end, " ");
 
             if (strcmp(actual_args->keyword, tok) == 0) {
-                char tmp[256];
+
+                char tmp[len];
                 sprintf(tmp, "%s, %d: %s", actual_args->inputFileName, lineNumber, line_copy);
                 insert((actual_args->list), tmp);
                 break;
@@ -103,6 +97,7 @@ void *processFile(void *args) {
 int main(int argc, char **argv) {
 
     const char *const keyword = argv[1];
+
     const int numberOfInputs = atoi(argv[2]);
 
     node *root[numberOfInputs];
@@ -125,6 +120,7 @@ int main(int argc, char **argv) {
         err = pthread_create(&(tid[i]), NULL, &processFile, pfa[i]);
         if (err != 0)
             printf("\ncan't create thread :[%s]", strerror(err));
+
 
         pthread_join(tid[i], NULL);
     }

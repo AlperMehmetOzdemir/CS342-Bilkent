@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/celik/Desktop/CS342-Bilkent/CS342_P2/pmatch2.c" "/home/celik/Desktop/CS342-Bilkent/CS342_P2/cmake-build-debug/CMakeFiles/CS342_P3.dir/pmatch2.c.o"
+  "/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P2/pmatch2.c" "/Users/celikkoseoglu/Dropbox/Bilkent Stuff/Junior/CS342/CS342-Bilkent/CS342_P2/cmake-build-debug/CMakeFiles/CS342_P3.dir/pmatch2.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
