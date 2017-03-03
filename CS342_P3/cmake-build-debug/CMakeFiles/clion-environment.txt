@@ -1,1 +1,1 @@
-CMake: 3.6.3@/Applications/CLion.app/Contents/bin/cmake/bin/cmake
+CMake: 3.7.2@/home/celik/Documents/cmake-3.7.2-Linux-x86_64/bin/cmake

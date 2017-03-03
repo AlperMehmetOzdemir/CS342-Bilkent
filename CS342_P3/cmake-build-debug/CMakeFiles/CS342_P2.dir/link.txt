@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/CS342_P2.dir/pmatch3.c.o  -o CS342_P2 
