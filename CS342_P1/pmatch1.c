@@ -26,9 +26,7 @@ void processFile(char *inputFileName, char *outputFileName, const char *keyword)
             '\n') //replace line endings with string terminators. Well, maybe this results in a memory leak because "someString\n\0" becomes "someString\0\0". Not sure about that though.
             line[read - 1] = '\0';
 
-        char *line_copy;
-        line_copy = (char *) malloc(sizeof(char) * strlen(line));
-        strcpy(line_copy, line);
+        char *line_copy = strdup(line);
 
         char *tok = line, *end = line;
         while (tok != NULL) {

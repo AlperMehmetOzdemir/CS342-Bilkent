@@ -15,10 +15,7 @@ void insert(node **tree, char *val) { //this is the btree from HW1 but only exte
         temp = (node *) malloc(sizeof(node));
         temp->right = NULL;
 
-        char * val_copy;
-        val_copy = (char*)malloc(sizeof(char) * strlen(val));
-        strcpy(val_copy, val);
-
+        char *val_copy = strdup(val);
         temp->data = val_copy;
         *tree = temp;
         return;
@@ -70,7 +67,7 @@ void *processFile(void *args) {
             line[read - 1] = '\0';
 
         char *line_copy;
-        line_copy = (char *) malloc(sizeof(char) * strlen(line));
+        line_copy = (char *) malloc(sizeof(char) * (strlen(line)));
         strcpy(line_copy, line);
 
         char *tok = line, *end = line;
@@ -82,6 +79,7 @@ void *processFile(void *args) {
                 char tmp[len];
                 sprintf(tmp, "%s, %d: %s", actual_args->inputFileName, lineNumber, line_copy);
                 insert((actual_args->list), tmp);
+
                 break;
             }
 
@@ -113,17 +111,22 @@ int main(int argc, char **argv) {
 
     for (int i = 0; i < numberOfInputs; i++)
     {
+
         pfa[i]->inputFileName = argv[i + 3];
         pfa[i]->keyword = keyword;
         pfa[i]->list = &root[i];
 
         err = pthread_create(&(tid[i]), NULL, &processFile, pfa[i]);
+
         if (err != 0)
             printf("\ncan't create thread :[%s]", strerror(err));
 
 
         pthread_join(tid[i], NULL);
+
+
     }
+
 
     //now start merging the intermediary .txt files
     FILE *fw;
