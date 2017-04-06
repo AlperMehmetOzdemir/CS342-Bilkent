@@ -3,5 +3,5 @@ project(CS342_P3)
 
 set(CMAKE_C_STANDARD 99)
 
-set(SOURCE_FILES main.c diningphil.h probabilityengine.h)
+set(SOURCE_FILES phil.c diningphil.h probabilityengine.h)
 add_executable(CS342_P3 ${SOURCE_FILES} diningphil.h probabilityengine.h)

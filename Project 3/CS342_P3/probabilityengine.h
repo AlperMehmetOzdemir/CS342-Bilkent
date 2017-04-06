@@ -1,4 +1,5 @@
 #include <math.h>
+#include "stdlib.h"
 
 #ifndef CS342_P3_PROBABILITYENGINE_H
 #define CS342_P3_PROBABILITYENGINE_H

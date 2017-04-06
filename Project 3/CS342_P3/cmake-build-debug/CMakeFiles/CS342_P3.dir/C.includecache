@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/celikkoseoglu/CLionProjects/CS342_P3/diningphil.h
+/home/celik/Desktop/CS342-Bilkent/Project 3/CS342_P3/diningphil.h
 stdio.h
 -
 stdlib.h
@@ -18,15 +18,17 @@ pthread.h
 assert.h
 -
 
-/Users/celikkoseoglu/CLionProjects/CS342_P3/main.c
+/home/celik/Desktop/CS342-Bilkent/Project 3/CS342_P3/main.c
 memory.h
 -
 diningphil.h
-/Users/celikkoseoglu/CLionProjects/CS342_P3/diningphil.h
+/home/celik/Desktop/CS342-Bilkent/Project 3/CS342_P3/diningphil.h
 probabilityengine.h
-/Users/celikkoseoglu/CLionProjects/CS342_P3/probabilityengine.h
+/home/celik/Desktop/CS342-Bilkent/Project 3/CS342_P3/probabilityengine.h
 
-/Users/celikkoseoglu/CLionProjects/CS342_P3/probabilityengine.h
+/home/celik/Desktop/CS342-Bilkent/Project 3/CS342_P3/probabilityengine.h
 math.h
 -
+stdlib.h
+/home/celik/Desktop/CS342-Bilkent/Project 3/CS342_P3/stdlib.h
 

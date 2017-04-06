@@ -1,6 +1,6 @@
 #include <memory.h>
-#import "diningphil.h"
-#import "probabilityengine.h"
+#include "diningphil.h"
+#include "probabilityengine.h"
 
 //!TO DO LIST
 //!TEST ON LINUX
