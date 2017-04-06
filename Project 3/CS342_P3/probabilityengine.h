@@ -20,3 +20,24 @@ unsigned int get_exponential_random_value(double mean, int lower_bound, int uppe
 
     return (unsigned int)val;
 }
+
+
+//Standard deviation calculation function.
+double calculateSD(int data[], int eat_count)
+{
+    double sum = 0.0, mean, standardDeviation = 0.0;
+
+    int i;
+
+    for(i=0; i<eat_count; ++i)
+    {
+        sum += data[i];
+    }
+
+    mean = sum/eat_count;
+
+    for(i=0; i<eat_count; ++i)
+        standardDeviation += pow(data[i] - mean, 2);
+
+    return sqrt(standardDeviation/eat_count);
+}

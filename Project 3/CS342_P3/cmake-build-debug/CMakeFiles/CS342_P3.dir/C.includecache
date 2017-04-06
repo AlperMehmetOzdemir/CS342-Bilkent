@@ -19,6 +19,8 @@ assert.h
 -
 
 /Users/celikkoseoglu/CLionProjects/CS342_P3/main.c
+memory.h
+-
 diningphil.h
 /Users/celikkoseoglu/CLionProjects/CS342_P3/diningphil.h
 probabilityengine.h
