@@ -15,7 +15,3 @@ Project 3 Grade - 100
 Project 4 Grade - 95 (-5 reason unknown)
 
 Project 5 Grade - 100
-
-Project 4 Grade - TBA
-
-Project 5 Grade - 100
